@@ -1,0 +1,43 @@
+<%- include('./components/header.ejs')   %>
+
+<% 
+console.log(result);
+if (result){  %>
+
+    <div class="card">
+        <div class="card-header">
+          Article
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= result.title %></h5>
+          <p class="card-text"><%= result.article %></p>
+          <a href="/edit/article/<%= result._id %>" class="btn btn-primary">Edit Article</a>
+          <a href="/delete-article/<%= result._id %>" class="btn btn-secondary">Delete Article</a>
+        </div>
+      </div>
+    
+  
+
+    <%
+ } else{%>
+
+    there is no record
+    <%
+ }%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./components/footer.ejs')   %>
